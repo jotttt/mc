@@ -1,2 +1,79 @@
+@import "_fonts.scss";
 @import "_variables.scss";
 
+.para {
+    height: 100vh;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    transition: all 999999s;
+}
+
+.bg-1 {
+    background: url(../img/wood_1920x1280-min.jpg);
+
+    .triangle {
+        width:85%;
+        padding:60% 0 0;
+        //overflow:hidden;
+        position:fixed;
+        top:0;
+        right:0;
+
+        &:after {
+            content: "";
+            display: block;
+            position:absolute;
+            left:0;
+            top:70%;
+            width: 0;
+            height: 0;
+            border-top: 1550px solid transparent;
+            border-bottom: 1000px solid transparent;
+            border-right: 4000px solid black;
+            margin-top:-1660px;
+        }
+    }
+
+    .v-center {
+        position: absolute;
+        width: 100%;
+        margin-top: 30vh;
+        transition: all 999999s;
+
+        .logo {
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Wagner Grotesk Pro', sans-serif;
+            font-weight: 400;
+            font-size: 140px;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 410px) {
+
+}
+
+@media (max-width: 370px) {
+
+}
