@@ -6,7 +6,7 @@
   font-weight: normal;
   font-style: normal; }
 
-/* line 4, ../mc/scss/style.scss */
+/* line 4, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
 .para {
   height: 100vh;
   overflow: hidden;
@@ -15,17 +15,17 @@
   background-size: cover;
   transition: all 999999s; }
 
-/* line 13, ../mc/scss/style.scss */
+/* line 13, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
 .bg-1 {
   background: url(../img/wood_1920x1280-min.jpg); }
-  /* line 16, ../mc/scss/style.scss */
+  /* line 16, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
   .bg-1 .triangle {
     width: 85%;
     padding: 60% 0 0;
     position: fixed;
     top: 0;
     right: 0; }
-    /* line 24, ../mc/scss/style.scss */
+    /* line 24, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
     .bg-1 .triangle:after {
       content: "";
       display: block;
@@ -38,13 +38,13 @@
       border-bottom: 1000px solid transparent;
       border-right: 4000px solid black;
       margin-top: -1660px; }
-  /* line 39, ../mc/scss/style.scss */
+  /* line 39, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
   .bg-1 .v-center {
     position: absolute;
     width: 100%;
     margin-top: 30vh;
     transition: all 999999s; }
-    /* line 45, ../mc/scss/style.scss */
+    /* line 45, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
     .bg-1 .v-center .logo {
       color: #fff;
       text-align: center;
@@ -53,5 +53,30 @@
       font-weight: 400;
       font-size: 140px;
       text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6); }
+
+/* line 57, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
+.bg-2 {
+  position: relative;
+  background: url(../img/raimepott_1920x1280.jpg);
+  height: 100vh; }
+  /* line 62, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
+  .bg-2 .triangle {
+    width: 85%;
+    padding: 70% 0 0;
+    position: fixed;
+    top: 100px; }
+    /* line 69, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
+    .bg-2 .triangle:after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 70%;
+      width: 0;
+      height: 0;
+      border-top: 1000px solid transparent;
+      border-bottom: 500px solid transparent;
+      border-left: 1000px solid rgba(0, 0, 0, 0.7);
+      margin-top: -1460px; }
 
 /*# sourceMappingURL=style.css.map */
