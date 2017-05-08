@@ -15,15 +15,8 @@
                 "C:/Users/Admin/Documents/webdev/mc/scss/style.scss": 1,
                 "C:/Users/Admin/Documents/webdev/mc/index.html": 1
             },
-<<<<<<< HEAD
-=======
-            "bigeyex.bracketsSFTPUpload.C:/Users/jotttt/Documents/webdev/mc/|changed_files": {
-                "C:/Users/jotttt/Documents/webdev/mc/index.html": 1,
-                "C:/Users/jotttt/Documents/webdev/mc/scss/style.scss": 1
-            },
-            "linting.collapsed": true,
->>>>>>> origin/master
-            "brackets-git.gitPath": "git"
+            "brackets-git.gitPath": "git",
+            "linting.collapsed": false
         }
     }
 }

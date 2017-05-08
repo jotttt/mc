@@ -1,12 +1,99 @@
 @import "_fonts.scss";
 @import "_variables.scss";
+@import "_images.scss";
 @import "_elements.scss";
+
+h2 {
+    font-family: 'Antonio Light', sans-serif;
+    font-size: 32px;
+    color: $yellow;
+    padding-bottom: 12px;
+}
+
+p {
+    font-size: 16px;
+}
+
+a {
+    font-family: 'Antonio Light', sans-serif;
+    font-size: 24px;
+    color: $yellow;
+}
+
+.btn-white {
+
+}
+
+.logo {
+    @include logo-img-black;
+    width: 88px;
+    height: 60px;
+    //margin: 0 auto;
+}
 
 .contact-btn-container {
     position: fixed;
     right: 40px;
     z-index: 1;
+
+    a {
+        font-family: 'Antonio Light', sans-serif;
+        font-size: 24px;
+        padding: 5px 20px;
+    }
 }
+
+// TOP-NAVBAR ////////////////////////////////////////////////////
+
+.fixed-nav{
+    opacity: 0;
+    background-color: transparent;
+    padding: 0px  !important;
+    margin-bottom: 5px;
+    position: fixed;
+    top:0;
+    z-index:888;
+    width: 100%;
+    transition: all 1s ;
+
+    .site-logo{
+        padding: 15px 20px !important;
+        margin: 15px 10px !important;
+    }
+
+    .navbar-collapse{
+        text-align: center;
+        border-top-width: 0px;
+        padding-top: 10px;
+        margin-top: 5px;
+
+        .navbar-nav {
+            width: 100%;
+            text-align: center;
+
+            li {
+                float: none;
+                display: inline-block;
+
+
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+.menu-collapsed-button{
+    margin: 20px 15px 10px 15px !important;
+}
+/*end top navbar*/
 
 .para {
     height: 100vh;
@@ -37,7 +124,7 @@
     .triangle {
         position: absolute;
         height: 100%;
-        width: 80%;
+        width: 85%;
         right: 0;
         overflow: hidden;
 
@@ -45,6 +132,15 @@
             position: relative;
             top: 50%;
             transform: translateY(-50%);
+        }
+
+        .chef {
+            @include chef-img;
+            height: 464px * 1.3;
+            width: 444px * 1.3;
+            position: absolute;
+            bottom: -60px;
+            right: -100px;
         }
     }
 
@@ -55,57 +151,151 @@
         transition: all 999999s;
 
         .logo {
-            color: #fff;
-            text-align: center;
-            text-transform: uppercase;
-            font-family: 'Wagner Grotesk Pro', sans-serif;
-            font-weight: 400;
-            font-size: 140px;
-            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+            @include logo-img;
+            width: 132px;
+            height: 80px;
+            margin: 0 auto;
         }
 
         .home-navigation {
             position: relative;
             width: 600px;
             height: 200px;
-            margin: -170px auto 0;
+            margin: -130px auto 0;
 
             .item {
+                font-family: 'Antonio Light', sans-serif;
+                font-size: 27px;
+                text-transform: uppercase;
+                letter-spacing: 6px;
+
+                &:hover, &:focus {
+                    text-decoration: none;
+                    color: $yellow;
+                }
+
+
+
                 &.one {
                     position: absolute;
-                    top: 50px;
-                    left: 50px;
+                    top: 75px;
+                    left: 35px;
+
+                    .mug {
+                        @include mug-img;
+                        width: 36px;
+                        height: 29px;
+                    }
+
+                    .decor {
+                        @include text-decor-img;
+                        margin: -20px 44px;
+                    }
                 }
 
                 &.two {
                     position: absolute;
-                    top: 150px;
+                    top: 200px;
                     left: 50%;
-                    margin-left: -40px
+                    margin-left: -110px;
+
+                    .decor {
+                        @include text-decor-img;
+                        margin: -20px 81px;
+                    }
                 }
 
                 &.three {
                     position: absolute;
-                    top: 50px;
-                    right: 50px;
+                    top: 75px;
+                    right: 40px;
+
+                    .decor {
+                        @include text-decor-img;
+                        margin: -20px 36px;
+                    }
                 }
             }
-
-
         }
     }
 }
 
 .bg-1 {
     background-image: url(../img/raimepott_1920x1280.jpg);
+
+    .triangle {
+        position: absolute;
+        height: 100%;
+        width: 40%;
+        left: 0;
+        overflow: hidden;
+
+        svg {
+            opacity: 0.8;
+            position: relative;
+            top: 60%;
+            transform: translateY(-50%);
+        }
+
+        .text {
+            position: absolute;
+            width: 500px;
+            top: 50%;
+            color: white;
+            padding: 20px 20px 20px 40px;
+
+
+        }
+
+    }
+
 }
 
 .bg-2 {
     background-image: url(../img/kalavalik_1920x1280.jpg);
+
+    .triangle {
+        position: absolute;
+        height: 100%;
+        width: 40%;
+        right: 0;
+        overflow: hidden;
+        opacity: 0.8;
+
+        svg {
+            position: relative;
+            top: 60%;
+            transform: translateY(-50%);
+        }
+
+    }
+
+
 }
 
 .bg-3 {
     background-image: url(../img/suupistevalik_1920x1280.jpg);
+
+    .triangle {
+        position: absolute;
+        height: 100%;
+        width: 40%;
+        left: 0;
+        overflow: hidden;
+        opacity: 0.8;
+
+        svg {
+            position: relative;
+            top: 60%;
+            transform: translateY(-50%);
+        }
+
+    }
+
+}
+
+.top-nav {
+
 }
 
 
