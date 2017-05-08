@@ -6,7 +6,18 @@
   font-weight: normal;
   font-style: normal; }
 
-/* line 4, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
+/* line 1, ../../Users/Admin/Documents/webdev/mc/scss/_elements.scss */
+.btn-primary {
+  text-transform: uppercase;
+  border-radius: 1px; }
+
+/* line 5, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
+.contact-btn-container {
+  position: fixed;
+  right: 40px;
+  z-index: 1; }
+
+/* line 11, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
 .para {
   height: 100vh;
   overflow: hidden;
@@ -14,38 +25,41 @@
   background-position: center center;
   background-size: cover;
   transition: all 999999s; }
+  /* line 19, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
+  .para:nth-child(2n) {
+    box-shadow: inset 0 0 0em #111; }
 
-/* line 13, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
-.bg-1 {
-  background: url(../img/wood_1920x1280-min.jpg); }
-  /* line 16, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
-  .bg-1 .triangle {
-    width: 85%;
-    padding: 60% 0 0;
-    position: fixed;
-    top: 0;
-    right: 0; }
-    /* line 24, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
-    .bg-1 .triangle:after {
-      content: "";
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 70%;
-      width: 0;
-      height: 0;
-      border-top: 1550px solid transparent;
-      border-bottom: 1000px solid transparent;
-      border-right: 4000px solid black;
-      margin-top: -1660px; }
-  /* line 39, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
-  .bg-1 .v-center {
+/* line 24, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
+.non-para {
+  height: 100vh;
+  opacity: 1;
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover; }
+
+/* line 33, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
+.bg-0 {
+  background-image: url(../img/wood_1920x1280-min.jpg); }
+  /* line 37, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
+  .bg-0 .triangle {
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    right: 0;
+    overflow: hidden; }
+    /* line 44, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
+    .bg-0 .triangle svg {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%); }
+  /* line 51, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
+  .bg-0 .v-center {
     position: absolute;
     width: 100%;
     margin-top: 30vh;
     transition: all 999999s; }
-    /* line 45, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
-    .bg-1 .v-center .logo {
+    /* line 57, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
+    .bg-0 .v-center .logo {
       color: #fff;
       text-align: center;
       text-transform: uppercase;
@@ -53,30 +67,39 @@
       font-weight: 400;
       font-size: 140px;
       text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6); }
+    /* line 67, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
+    .bg-0 .v-center .home-navigation {
+      position: relative;
+      width: 600px;
+      height: 200px;
+      margin: -170px auto 0; }
+      /* line 74, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
+      .bg-0 .v-center .home-navigation .item.one {
+        position: absolute;
+        top: 50px;
+        left: 50px; }
+      /* line 80, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
+      .bg-0 .v-center .home-navigation .item.two {
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        margin-left: -40px; }
+      /* line 87, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
+      .bg-0 .v-center .home-navigation .item.three {
+        position: absolute;
+        top: 50px;
+        right: 50px; }
 
-/* line 57, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
+/* line 99, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
+.bg-1 {
+  background-image: url(../img/raimepott_1920x1280.jpg); }
+
+/* line 103, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
 .bg-2 {
-  position: relative;
-  background: url(../img/raimepott_1920x1280.jpg);
-  height: 100vh; }
-  /* line 62, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
-  .bg-2 .triangle {
-    width: 85%;
-    padding: 70% 0 0;
-    position: fixed;
-    top: 100px; }
-    /* line 69, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
-    .bg-2 .triangle:after {
-      content: "";
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 70%;
-      width: 0;
-      height: 0;
-      border-top: 1000px solid transparent;
-      border-bottom: 500px solid transparent;
-      border-left: 1000px solid rgba(0, 0, 0, 0.7);
-      margin-top: -1460px; }
+  background-image: url(../img/kalavalik_1920x1280.jpg); }
+
+/* line 107, ../../Users/Admin/Documents/webdev/mc/scss/style.scss */
+.bg-3 {
+  background-image: url(../img/suupistevalik_1920x1280.jpg); }
 
 /*# sourceMappingURL=style.css.map */
