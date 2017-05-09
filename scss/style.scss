@@ -7,91 +7,123 @@ h2 {
     font-family: 'Antonio Light', sans-serif;
     font-size: 32px;
     color: $yellow;
-    padding-bottom: 12px;
+    padding-bottom: 10px;
 }
 
 p {
     font-size: 16px;
+    color: white;
 }
 
 a {
     font-family: 'Antonio Light', sans-serif;
     font-size: 24px;
     color: $yellow;
-}
 
-.btn-white {
+    &.btn {
+        font-size: 24px;
+        text-transform: uppercase;
+        border-radius: 0px;
 
+
+        &.btn-black {
+            color: black;
+            background: transparent;
+            font-size: 20px;
+            letter-spacing: 4px;
+            padding: 8px 10px 6px 14px;
+            margin: 15px 5px;
+            border: 2px solid transparent;
+            //text-shadow: 1px 0px 0px rgba(150, 150, 150, 1);
+
+            &:hover, &:focus, &:active {
+                border: 2px solid black;
+                background: transparent;
+            }
+
+            &.contact {
+                color: white;
+
+                &:hover, &:focus, &:active {
+                    border: 2px solid white;
+                }
+            }
+        }
+
+        &.btn-white {
+            color: white;
+            border: 2px solid white;
+            padding: 5px 8px 3px 12px;
+            margin-right: 10px;
+            font-size: 16px;
+            letter-spacing: 4px;
+        }
+
+    }
 }
 
 .logo {
     @include logo-img-black;
     width: 88px;
     height: 60px;
-    //margin: 0 auto;
+    margin: 10px;
+    position: absolute;
+}
+
+.mug {
+    @include mug-img-black;
+    width: 75px \ 2;
+    height: 58px \ 2;
 }
 
 .contact-btn-container {
     position: fixed;
     right: 40px;
-    z-index: 1;
+    z-index: 2000;
 
     a {
-        font-family: 'Antonio Light', sans-serif;
-        font-size: 24px;
         padding: 5px 20px;
     }
 }
 
+.buttons {
+    margin-top: 20px;
+}
+
 // TOP-NAVBAR ////////////////////////////////////////////////////
-
-.fixed-nav{
+.navbar-fixed-top {
     opacity: 0;
-    background-color: transparent;
-    padding: 0px  !important;
-    margin-bottom: 5px;
-    position: fixed;
-    top:0;
-    z-index:888;
-    width: 100%;
-    transition: all 1s ;
 
-    .site-logo{
-        padding: 15px 20px !important;
-        margin: 15px 10px !important;
+    .site-logo {
+
     }
 
-    .navbar-collapse{
+    .navbar-collapse {
         text-align: center;
-        border-top-width: 0px;
-        padding-top: 10px;
-        margin-top: 5px;
 
         .navbar-nav {
-            width: 100%;
-            text-align: center;
+            float: none;
+            display: inline-block;
 
             li {
-                float: none;
-                display: inline-block;
 
+                &.active {
 
+                    a {
+                        border: 2px solid black;
+                    }
+                }
+
+                &.ignore.active {
+
+                    a {
+                        border: 0px solid black;
+                    }
+                }
             }
+
         }
     }
-}
-
-
-
-
-
-
-
-.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-    background-color: transparent;
-}
-.menu-collapsed-button{
-    margin: 20px 15px 10px 15px !important;
 }
 /*end top navbar*/
 
@@ -150,7 +182,7 @@ a {
         margin-top: 30vh;
         transition: all 999999s;
 
-        .logo {
+        .center-logo {
             @include logo-img;
             width: 132px;
             height: 80px;
@@ -182,7 +214,7 @@ a {
                     left: 35px;
 
                     .mug {
-                        @include mug-img;
+                        @include mug-img-yellow;
                         width: 36px;
                         height: 29px;
                     }
@@ -239,12 +271,9 @@ a {
 
         .text {
             position: absolute;
-            width: 500px;
-            top: 50%;
-            color: white;
+            width: 60%;
+            top: 44%;
             padding: 20px 20px 20px 40px;
-
-
         }
 
     }
@@ -260,12 +289,19 @@ a {
         width: 40%;
         right: 0;
         overflow: hidden;
-        opacity: 0.8;
 
         svg {
             position: relative;
             top: 60%;
             transform: translateY(-50%);
+            opacity: 0.8;
+        }
+
+        .text {
+            position: absolute;
+            width: 60%;
+            top: 44%;
+            padding: 20px 20px 20px 40px;
         }
 
     }
@@ -282,25 +318,25 @@ a {
         width: 40%;
         left: 0;
         overflow: hidden;
-        opacity: 0.8;
+
 
         svg {
             position: relative;
             top: 60%;
             transform: translateY(-50%);
+            opacity: 0.8;
+        }
+
+        .text {
+            position: absolute;
+            width: 60%;
+            top: 44%;
+            padding: 20px 20px 20px 40px;
         }
 
     }
 
 }
-
-.top-nav {
-
-}
-
-
-
-
 
 
 @media (min-width: 992px) and (max-width: 1199px) {
