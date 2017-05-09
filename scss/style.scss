@@ -3,6 +3,9 @@
 @import "_images.scss";
 @import "_elements.scss";
 
+body {
+    font-size: 16px;
+}
 h2 {
     font-family: 'Antonio Light', sans-serif;
     font-size: 32px;
@@ -11,17 +14,17 @@ h2 {
 }
 
 p {
-    font-size: 16px;
     color: white;
 }
 
 a {
-    font-family: 'Antonio Light', sans-serif;
-    font-size: 24px;
-    color: $yellow;
+    color: white;
+    text-decoration: underline;
 
     &.btn {
+        font-family: 'Antonio Light', sans-serif;
         font-size: 24px;
+        text-decoration: none;
         text-transform: uppercase;
         border-radius: 0px;
 
@@ -62,18 +65,31 @@ a {
     }
 }
 
+u {
+    text-decoration: underline;
+}
+
 .logo {
     @include logo-img-black;
     width: 88px;
     height: 60px;
-    margin: 10px;
+    margin: 10px 30px;
     position: absolute;
+
+    &.white {
+        @include logo-img-white;
+        z-index: 1;
+    }
 }
 
 .mug {
     @include mug-img-black;
     width: 75px \ 2;
     height: 58px \ 2;
+
+    &.white {
+        @include mug-img-white;
+    }
 }
 
 .contact-btn-container {
@@ -92,7 +108,7 @@ a {
 
 // TOP-NAVBAR ////////////////////////////////////////////////////
 .navbar-fixed-top {
-    opacity: 0;
+
 
     .site-logo {
 
@@ -152,11 +168,10 @@ a {
 .bg-0 {
     background-image: url(../img/wood_1920x1280-min.jpg);
 
-
     .triangle {
         position: absolute;
         height: 100%;
-        width: 85%;
+        width: 84%;
         right: 0;
         overflow: hidden;
 
@@ -168,8 +183,8 @@ a {
 
         .chef {
             @include chef-img;
-            height: 464px * 1.3;
-            width: 444px * 1.3;
+            height: 464px * 1.9;
+            width: 444px * 1.9;
             position: absolute;
             bottom: -60px;
             right: -100px;
@@ -183,7 +198,7 @@ a {
         transition: all 999999s;
 
         .center-logo {
-            @include logo-img;
+            @include logo-img-white;
             width: 132px;
             height: 80px;
             margin: 0 auto;
@@ -200,6 +215,8 @@ a {
                 font-size: 27px;
                 text-transform: uppercase;
                 letter-spacing: 6px;
+                color: $yellow;
+                text-decoration: none;
 
                 &:hover, &:focus {
                     text-decoration: none;
@@ -213,7 +230,7 @@ a {
                     top: 75px;
                     left: 35px;
 
-                    .mug {
+                    .yellow-mug {
                         @include mug-img-yellow;
                         width: 36px;
                         height: 29px;
@@ -286,21 +303,22 @@ a {
     .triangle {
         position: absolute;
         height: 100%;
-        width: 40%;
+        width: 50%;
         right: 0;
         overflow: hidden;
 
         svg {
             position: relative;
-            top: 60%;
+            top: 40%;
             transform: translateY(-50%);
             opacity: 0.8;
         }
 
         .text {
             position: absolute;
-            width: 60%;
-            top: 44%;
+            width: 58%;
+            top: 26%;
+            right: 0;
             padding: 20px 20px 20px 40px;
         }
 
@@ -333,9 +351,31 @@ a {
             top: 44%;
             padding: 20px 20px 20px 40px;
         }
+    }
+}
+
+#kontakt {
+    .triangle {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        overflow: hidden;
+
+        svg {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+         .text {
+            position: absolute;
+            width: 60%;
+            top: 44%;
+            padding: 20px 20px 20px 40px;
+        }
 
     }
-
 }
 
 
