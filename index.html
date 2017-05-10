@@ -123,39 +123,81 @@
           <polygon points="0,800 1000,585 1000,345 0,170 "/>
         </svg>
         <div class="text">
-          <h2>Abiks varustusega</h2>
-          <p>Lisaks toitlustusele rendime inventari. Meil on olemas kõik vajalik, et viia läbi üks korralik üritus kuni 500le inimesele. Kui meie inventari nimekirjas pole kõike, mida soovite, siis leiame need <u>koos.</u></p>
+
+          <form action="/action_page.php">
+
+             <div class="group">
+              <input type="text" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Nimi</label>
+            </div>
+
+            <div class="group">
+              <input type="text" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Telefon</label>
+            </div>
+
+             <div class="group">
+              <input type="text" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>E-mail</label>
+            </div>
+
+             <div class="group">
+               <textarea required></textarea>
+              <span class="highlight textarea"></span>
+              <span class="bar"></span>
+              <label>Sõnum</label>
+            </div>
+
+            <a href="#" class="btn btn-white">Saada</a>
+
+          </form>
+
+        </div>
+
+        <div class="footer">
+          <p>Kohvik Maru</p>
+          <p>Vesilennuki 6, Tallinn</p>
+          <p>maru@lennusadam.eu</p>
+          <p>+372 5198765</p>
         </div>
       </div>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="js/ext/bootstrap.min.js"></script>
-      <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
-      <script type="text/javascript" src="js/ext/scroll-to/init.js"></script>
+    </div>
 
-      <script>
-        $(window).scroll(function() {
-          var hH = $('#home').outerHeight();
-          if($(this).scrollTop()>(hH-50)) {
-            $( ".navbar-fixed-top" ).removeClass('hidden');
-          }
-          else {
-            $( ".navbar-fixed-top" ).addClass('hidden');
-          }
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/ext/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="js/ext/scroll-to/init.js"></script>
 
-          if( ( $(window).scrollTop() + $(window).height() ) === $(document).height()) {
-            $('.btn-black').addClass('contact');
-            $('.mug').addClass('white');
+    <script>
+      $(window).scroll(function() {
+        var hH = $('#home').outerHeight();
+        if($(this).scrollTop()>(hH-50)) {
+          $( ".navbar-fixed-top" ).removeClass('hidden');
+        }
+        else {
+          $( ".navbar-fixed-top" ).addClass('hidden');
+        }
 
-          }
-          else {
-            $('.btn-black').removeClass('contact');
-            $('.mug').removeClass('white');
-          }
-        });
+        if( ( $(window).scrollTop() + $(window).height() ) === $(document).height()) {
+          $('.btn-black').addClass('contact');
+          $('.mug').addClass('white');
 
-        $('.ignore').css({'visibility':'hidden', 'width':'0%'});
+        }
+        else {
+          $('.btn-black').removeClass('contact');
+          $('.mug').removeClass('white');
+        }
+      });
 
-      </script>
-      </body>
-    </html>
+      $('.ignore').css({'visibility':'hidden', 'width':'0%'});
+
+    </script>
+  </body>
+</html>
