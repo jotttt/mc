@@ -26,7 +26,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li><a class="btn btn-black" href="#kohvik">Kohvik <i class="mug"></i></a></li>
+            <li><a class="btn btn-black" href="#kohvik">Kohvik <span><i class="mug"></i></span></a></li>
             <li><a class="btn btn-black" href="#catering">Catering</a></li>
             <li><a class="btn btn-black" href="#inventar">Inventari rent</a></li>
             <li class="ignore"><a href="#kontakt"></a></li>
@@ -197,6 +197,19 @@
       });
 
       $('.ignore').css({'visibility':'hidden', 'width':'0%'});
+
+      // IE fix for jumpy parallax
+      if(navigator.userAgent.match(/Trident\/7\./)) { // if IE
+        $('body').on("mousewheel", function () {
+            // remove default behavior
+            event.preventDefault();
+
+            //scroll without smoothing
+            var wheelDelta = event.wheelDelta;
+            var currentScrollPosition = window.pageYOffset;
+            window.scrollTo(0, currentScrollPosition - wheelDelta);
+        });
+}
 
     </script>
   </body>

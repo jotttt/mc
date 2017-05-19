@@ -1,0 +1,10 @@
+// Internet Explorer 10 & 11 specific rules
+@media all and (-ms-high-contrast:none) {
+    *::-ms-backdrop, #home {
+        .triangle {
+            svg {
+                display: none;
+            }
+        }
+    }
+}
