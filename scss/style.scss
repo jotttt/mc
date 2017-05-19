@@ -74,11 +74,13 @@ u {
     @include logo-img-black;
     width: 88px;
     height: 60px;
+    background-size: 88px 60px;
     margin: 10px 30px;
     position: absolute;
 
     &.white {
         @include logo-img-white;
+        background-size: 88px 60px;
         z-index: 1;
     }
 }
@@ -184,8 +186,9 @@ u {
 
         .chef {
             @include chef-img;
-            height: 464px * 1.9;
-            width: 444px * 1.9;
+            height: 464px*1.9 ;
+            width: 444px*1.9;
+            background-size: 444px*1.9 464px* 1.9;
             position: absolute;
             bottom: -60px;
             right: -100px;
@@ -195,7 +198,7 @@ u {
     .v-center {
         position: absolute;
         width: 100%;
-        margin-top: 30vh;
+        top: 300px;
         transition: all 999999s;
 
         .center-logo {
