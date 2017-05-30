@@ -1,4 +1,131 @@
+// BUTTONS ////////////////////////////////////////////////
 .btn-primary {
     text-transform: uppercase;
     border-radius: 1px;
     }
+
+a {
+    &.btn {
+        font-family: 'Antonio Light', sans-serif;
+        font-size: 24px;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 0px;
+
+
+        &.btn-black {
+            color: black;
+            background: transparent;
+            font-size: 20px;
+            letter-spacing: 4px;
+            padding: 8px 10px 6px 14px;
+            margin: 15px 5px;
+            border: 2px solid transparent;
+            //text-shadow: 1px 0px 0px rgba(150, 150, 150, 1);
+
+            &:hover, &:focus, &:active {
+                border: 2px solid black;
+                background: transparent;
+            }
+
+            &.contact {
+                color: white;
+
+                &:hover, &:focus, &:active {
+                    border: 2px solid white;
+                }
+            }
+        }
+
+        &.btn-white {
+            color: white;
+            border: 2px solid white;
+            padding: 5px 8px 3px 12px;
+            margin-right: 10px;
+            font-size: 16px;
+            letter-spacing: 4px;
+        }
+
+    }
+}
+
+.contact-btn-container {
+    position: fixed;
+    right: 40px;
+    z-index: 2000;
+
+    a {
+        padding: 5px 20px;
+    }
+}
+
+.buttons {
+    margin-top: 20px;
+}
+// end buttons --------------------------------------------
+
+// GRAPHICS ///////////////////////////////////////////////
+.logo {
+    @include logo-img-black;
+    width: 100px;
+    height: 56px;
+    background-size: 100px 56px;
+    margin: 10px 30px;
+    position: absolute;
+
+    &.white {
+        @include logo-img-white;
+        background-size: 100px 56px;
+        z-index: 1;
+    }
+}
+
+.mug {
+    @include mug-img-black;
+    position: absolute;
+    width: (75px/3);
+    height: (58px/3);
+    background-size: (75px/3) (58px/3);
+    left: 0px;
+    top: -19px;
+
+    &.white {
+        @include mug-img-white;
+        background-size: (75px/3) (58px/3);
+    }
+}
+
+.yellow-mug {
+    position: absolute;
+    @include mug-img-yellow;
+    width: (75px/2.4);
+    height: (58px/2.4);
+    background-size: (75px/2.4) (58px/2.4);
+    margin-left: 5px;
+    margin-top: 5px;
+}
+// end graphics -------------------------------------------
+
+// PARALLAX ///////////////////////////////////////////////
+.para {
+    height: 100vh;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    transition: all 999999s;
+
+    &:nth-child(2n) {
+        box-shadow: inset 0 0 0em #111;
+    }
+}
+
+.non-para {
+    height: 100vh;
+    opacity: 1;
+    overflow: hidden;
+    //background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+// end parallax -------------------------------------------

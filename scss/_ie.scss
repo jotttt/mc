@@ -1,6 +1,14 @@
 // Internet Explorer 10 & 11 specific rules
-@media all and (-ms-high-contrast:none) {
-    *::-ms-backdrop, #home {
+@media screen and (-ms-high-contrast: none) {
+    #home {
+        .triangle {
+            svg {
+                display: none;
+            }
+        }
+    }
+
+    #contact {
         .triangle {
             svg {
                 display: none;

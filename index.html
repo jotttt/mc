@@ -10,11 +10,11 @@
 
     <!--CONTACT BTN-->
     <div class="contact-btn-container">
-      <a href="#kontakt" class="btn btn-primary">Võta ühendust</a>
+      <a href="#contact" class="btn btn-primary">Võta ühendust</a>
     </div>
 
     <!--TOP-NAV-->
-    <nav class="navbar navbar-fixed-top hidden">
+    <nav class="navbar navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -26,10 +26,10 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li><a class="btn btn-black" href="#kohvik">Kohvik <span><i class="mug"></i></span></a></li>
+            <li><a class="btn btn-black" href="#cafe">Kohvik <span><i class="mug"></i></span></a></li>
             <li><a class="btn btn-black" href="#catering">Catering</a></li>
-            <li><a class="btn btn-black" href="#inventar">Inventari rent</a></li>
-            <li class="ignore"><a href="#kontakt"></a></li>
+            <li><a class="btn btn-black" href="#equipment">Inventari rent</a></li>
+            <li class="ignore"><a href="#contact"></a></li>
           </ul>
         </div>
       </div>
@@ -47,16 +47,16 @@
       <div class="v-center">
         <p class="center-logo"></p>
         <div class="home-navigation">
-          <a class="item one" href="#kohvik"><i class="decor"></i>Kohvik <i class="yellow-mug"></i></a>
-          <a class="item two" href="#inventar"><i class="decor"></i>Inventari rent</a>
+          <a class="item one" href="#cafe"><i class="decor"></i>Kohvik <i class="yellow-mug"></i></a>
+          <a class="item two" href="#equipment"><i class="decor"></i>Inventari rent</a>
           <a class=" item three" href="#catering"><i class="decor"></i>Catering</a>
         </div>
 
       </div>
     </div>
 
-    <!--KOHVIK-->
-    <div id="kohvik" class="non-para bg-1">
+    <!--CAFE-->
+    <div id="cafe" class="non-para bg-1">
       <span class="logo"></span>
       <div class="triangle">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -95,8 +95,8 @@
       </div>
     </div>
 
-    <!--INVENTAR-->
-    <div id="inventar" class="non-para bg-3">
+    <!--EQUIPMENT-->
+    <div id="equipment" class="non-para bg-3">
       <span class="logo"></span>
       <div class="triangle">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -114,8 +114,8 @@
       </div>
     </div>
 
-    <!--KONTAKT-->
-    <div id="kontakt" class="para bg-0 no-spy">
+    <!--CONTACT-->
+    <div id="contact" class="para bg-0 no-spy">
       <span class="logo white"></span>
       <div class="triangle">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -126,7 +126,7 @@
 
           <form action="/action_page.php">
 
-             <div class="group">
+            <div class="group">
               <input type="text" required>
               <span class="highlight"></span>
               <span class="bar"></span>
@@ -140,15 +140,15 @@
               <label>Telefon</label>
             </div>
 
-             <div class="group">
+            <div class="group">
               <input type="text" required>
               <span class="highlight"></span>
               <span class="bar"></span>
               <label>E-mail</label>
             </div>
 
-             <div class="group">
-               <textarea required></textarea>
+            <div class="group">
+              <textarea required></textarea>
               <span class="highlight textarea"></span>
               <span class="bar"></span>
               <label>Sõnum</label>
@@ -176,40 +176,46 @@
     <script type="text/javascript" src="js/ext/scroll-to/init.js"></script>
 
     <script>
+      // hide/show top nav according to height
       $(window).scroll(function() {
         var hH = $('#home').outerHeight();
         if($(this).scrollTop()>(hH-50)) {
-          $( ".navbar-fixed-top" ).removeClass('hidden');
+          $('.navbar-nav').css('opacity','1');
+          $('.navbar-nav').css('height','68px');
         }
         else {
-          $( ".navbar-fixed-top" ).addClass('hidden');
+          $('.navbar-nav').css('opacity','0');
+          $('.navbar-nav').css('height','0');
         }
 
         if( ( $(window).scrollTop() + $(window).height() ) === $(document).height()) {
           $('.btn-black').addClass('contact');
           $('.mug').addClass('white');
+          $('.navbar-nav').css('background','transparent');
 
         }
         else {
           $('.btn-black').removeClass('contact');
           $('.mug').removeClass('white');
+          $('.navbar-nav').css('background','rgba(255,255,255,0.7)');
         }
       });
 
-      $('.ignore').css({'visibility':'hidden', 'width':'0%'});
+      // ignore
+      $('.ignore').css({'visibility':'hidden', 'width':'0px'});
 
       // IE fix for jumpy parallax
       if(navigator.userAgent.match(/Trident\/7\./)) { // if IE
         $('body').on("mousewheel", function () {
-            // remove default behavior
-            event.preventDefault();
+          // remove default behavior
+          event.preventDefault();
 
-            //scroll without smoothing
-            var wheelDelta = event.wheelDelta;
-            var currentScrollPosition = window.pageYOffset;
-            window.scrollTo(0, currentScrollPosition - wheelDelta);
+          //scroll without smoothing
+          var wheelDelta = event.wheelDelta;
+          var currentScrollPosition = window.pageYOffset;
+          window.scrollTo(0, currentScrollPosition - wheelDelta);
         });
-}
+      }
 
     </script>
   </body>
