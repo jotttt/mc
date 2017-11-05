@@ -25,6 +25,9 @@
           <!--<a class="navbar-brand" href="#"><span class="logo"></span></a>-->
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
+           <div class="nav-logo-container">
+            <div class="logo"></div>
+          </div>
           <ul class="nav navbar-nav">
             <li><a class="btn btn-black" href="#cafe">Kohvik <span><i class="mug"></i></span></a></li>
             <li><a class="btn btn-black" href="#catering">Catering</a></li>
@@ -57,7 +60,7 @@
 
     <!--CAFE-->
     <div id="cafe" class="non-para bg-1">
-      <span class="logo"></span>
+      <!--<span class="logo"></span>-->
       <div class="triangle">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              viewbox="0 0 1000 890" enable-background="new 0 0 1000 890" xml:space="preserve">
@@ -76,7 +79,7 @@
 
     <!--CATERING-->
     <div id="catering" class="para bg-2">
-      <span class="logo"></span>
+    <!--  <span class="logo"></span>-->
       <div class="triangle">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              viewbox="0 0 1000 890" enable-background="new 0 0 1000 890" xml:space="preserve">
@@ -97,7 +100,7 @@
 
     <!--EQUIPMENT-->
     <div id="equipment" class="non-para bg-3">
-      <span class="logo"></span>
+     <!-- <span class="logo"></span>-->
       <div class="triangle">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              viewbox="0 0 1000 890" enable-background="new 0 0 1000 890" xml:space="preserve">
@@ -116,7 +119,7 @@
 
     <!--CONTACT-->
     <div id="contact" class="para bg-0 no-spy">
-      <span class="logo white"></span>
+     <!-- <span class="logo white"></span>-->
       <div class="triangle">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              viewbox="0 0 1000 890" enable-background="new 0 0 1000 890" xml:space="preserve">
@@ -180,15 +183,13 @@
       $(window).scroll(function() {
         var hH = $('#home').outerHeight();
         if($(this).scrollTop()>(hH-50)) {
-          $('.navbar-nav').css('opacity','1');
-          $('.navbar-nav').css('height','68px');
+          $('#myNavbar').css('opacity','1');
         }
         else {
-          $('.navbar-nav').css('opacity','0');
-          $('.navbar-nav').css('height','0');
+          $('#myNavbar').css('opacity','0');
         }
-
-        if( ( $(window).scrollTop() + $(window).height() ) === $(document).height()) {
+// change nav style at the end of the page
+       /* if( ( $(window).scrollTop() + $(window).height() ) === $(document).height()) {
           $('.btn-black').addClass('contact');
           $('.mug').addClass('white');
           $('.navbar-nav').css('background','transparent');
@@ -197,8 +198,8 @@
         else {
           $('.btn-black').removeClass('contact');
           $('.mug').removeClass('white');
-          $('.navbar-nav').css('background','rgba(255,255,255,0.7)');
-        }
+          $('.navbar-nav').css('background','rgba(255,255,255,0.8)');
+        }*/
       });
 
       // ignore

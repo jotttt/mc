@@ -39,18 +39,20 @@ u {
 
     .navbar-collapse {
         text-align: center;
+        transition: all 0.5s ease;
+        opacity: 0;
 
         .navbar-nav {
             float: none;
             display: inline-block;
-            background: rgba(255, 255, 255, 0.3);
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            padding: 0 25px;
-            opacity: 0;
-            height: 0;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 0 80px;
+            //margin-top: 20px;
+            opacity: 1;
+            height: 68px;
             overflow: hidden;
-            transition: all 0.5s ease;
+            border-radius: 10px;
+
 
             li {
 
@@ -84,13 +86,25 @@ u {
             }
 
         }
+        .nav-logo-container {
+            height: 50px;
+            width: 200px;
+            background: rgba(255, 255, 255, 0.9);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin: 10px auto 0;
+            .logo {
+                margin: 5px 50px 0;
+                background-size: auto;
+            }
+        }
     }
 }
 // end navbar --------------------------------------------------
 
 // PAGES ///////////////////////////////////////////////////////
 #home {
-    background-image: url(../img/wood_1920x1280-min.jpg);
+    background-image: url(../img/suupisted_1920x1280.jpg-min.jpg);
 
     .triangle {
         position: absolute;
@@ -99,11 +113,13 @@ u {
         right: 0;
         overflow: hidden;
 
+
         svg {
             position: relative;
             top: 50%;
             transform: translateY(-50%);
             overflow: hidden;
+            opacity: 0.8;
         }
 
         .chef {
@@ -120,7 +136,7 @@ u {
     .v-center {
         position: absolute;
         width: 100%;
-        top: 300px;
+        top: 400px;
         transition: all 999999s;
 
         .center-logo {
@@ -194,7 +210,7 @@ u {
 }
 
 #cafe {
-    background-image: url(../img/raimepott_1920x1280_light.jpg);
+    background-image: url(../img/kalavalik_1920x1280-min.jpg);
 
     .triangle {
         position: absolute;
@@ -222,7 +238,7 @@ u {
 }
 
 #catering {
-    background-image: url(../img/kalavalik_1920x1280_light.jpg);
+    background-image: url(../img/kana_1920x1280-min.jpg);
 
     .triangle {
         position: absolute;
@@ -252,7 +268,7 @@ u {
 }
 
 #equipment {
-    background-image: url(../img/suupistevalik_1920x1280_light.jpg);
+    background-image: url(../img/juustuvalik_1920x1280-min.jpg);
 
     .triangle {
         position: absolute;
@@ -279,7 +295,7 @@ u {
 }
 
 #contact {
-    background-image: url(../img/wood_1920x1280-min.jpg);
+    background-image: url(../img/kook_1920x1280-min.jpg);
 
     .triangle {
         position: absolute;
@@ -292,6 +308,7 @@ u {
             position: relative;
             top: 50%;
             transform: translateY(-50%);
+            opacity: 0.8;
         }
 
         .text {
@@ -435,6 +452,12 @@ u {
             position: absolute;
             right: 40px;
             bottom: 20px;
+            background: #cfd63d;
+            padding: 20px;
+
+            p {
+                color: black;
+            }
         }
     }
 

@@ -16,7 +16,14 @@
                 "C:/Users/Admin/Documents/webdev/mc/index.html": 1
             },
             "brackets-git.gitPath": "git",
-            "linting.collapsed": true
+            "linting.collapsed": true,
+            "bigeyex.bracketsSFTPUpload.C:/Users/jotttt/Documents/webdev/mc/|changed_files": {
+                "C:/Users/jotttt/Documents/webdev/mc/index.html": 1,
+                "C:/Users/jotttt/Documents/webdev/mc/scss/_elements.scss": 1,
+                "C:/Users/jotttt/Documents/webdev/mc/scss/_variables.scss": 1,
+                "C:/Users/jotttt/Documents/webdev/mc/scss/_images.scss": 1,
+                "C:/Users/jotttt/Documents/webdev/mc/scss/style.scss": 1
+            }
         }
     }
 }
