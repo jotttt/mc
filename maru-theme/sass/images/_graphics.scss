@@ -1,0 +1,43 @@
+// GRAPHICS ///////////////////////////////////////////////
+@import "images";
+
+.logo {
+    @include logo-img-black;
+    width: 100px;
+    height: 56px;
+    background-size: 100px 56px;
+    margin: 10px 30px;
+    position: absolute;
+
+    &.white {
+        @include logo-img-white;
+        background-size: 100px 56px;
+        z-index: 1;
+    }
+}
+
+.mug {
+    @include mug-img-black;
+    position: absolute;
+    width: (75px/3);
+    height: (58px/3);
+    background-size: (75px/3) (58px/3);
+    left: 0px;
+    top: -19px;
+
+    &.white {
+        @include mug-img-white;
+        background-size: (75px/3) (58px/3);
+    }
+}
+
+.yellow-mug {
+    position: absolute;
+    @include mug-img-yellow;
+    width: (75px/2.4);
+    height: (58px/2.4);
+    background-size: (75px/2.4) (58px/2.4);
+    margin-left: 5px;
+    margin-top: 5px;
+}
+// end graphics -------------------------------------------

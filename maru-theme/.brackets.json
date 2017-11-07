@@ -1,0 +1,18 @@
+{
+    "path": {
+        "sass/style.scss": {
+            "sass.enabled": true,
+            "sass.options": {
+                "outputDir": "../",
+                "output": "style.css",
+                "imagePath": null,
+                "sourceComments": "map",
+                "outputStyle": "nested"
+            },
+            "bigeyex.bracketsSFTPUpload.C:/Users/jotttt/Documents/webdev/mc/maru-theme/|changed_files": {
+                "C:/Users/jotttt/Documents/webdev/mc/maru-theme/.brackets.json": 1,
+                "C:/Users/jotttt/Documents/webdev/mc/maru-theme/sass/style.scss": 1
+            }
+        }
+    }
+}
