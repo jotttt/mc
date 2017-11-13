@@ -1,0 +1,362 @@
+// PAGES ///////////////////////////////////////////////////////
+#home {
+    background-image: url(http://www.duchamp.ee/mc-wp/wp-content/uploads/2017/11/suupisted_1920x1280.jpg-min.jpg);
+
+    .triangle {
+        position: absolute;
+        height: 100%;
+        width: 84%;
+        right: 0;
+        overflow: hidden;
+
+
+        svg {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            overflow: hidden;
+            opacity: 0.8;
+        }
+
+        .chef {
+            @include chef-img;
+            height: 464px*1.9 ;
+            width: 444px*1.9;
+            background-size: 444px*1.9 464px* 1.9;
+            position: absolute;
+            bottom: -60px;
+            right: -100px;
+        }
+    }
+
+    .v-center {
+        position: absolute;
+        width: 100%;
+        top: 45%;
+        transition: all 999999s;
+
+        .center-logo {
+            @include logo-img-white;
+            width: (100px*1.32);
+            height:(56px*1.32);
+            background-size: (100px*1.32) (56px*1.32);
+            margin: 0 auto;
+        }
+
+        .home-navigation {
+            position: relative;
+            width: 600px;
+            height: 200px;
+            margin: -130px auto 0;
+
+            .item {
+                font-family: 'Antonio Light', sans-serif;
+                font-size: 27px;
+                text-transform: uppercase;
+                letter-spacing: 6px;
+                color: $yellow;
+                text-decoration: none;
+                transition: all 0.2s ease-in-out;
+
+                &:hover, &:focus {
+                    text-decoration: none;
+                    color: $yellow;
+                    transform: scale(1.1);
+                }
+
+
+
+                &.one {
+                    position: absolute;
+                    top: 75px;
+                    left: 35px;
+                    width: 140px;
+
+                    .decor {
+                        @include text-decor-img;
+                        margin: -20px 44px;
+                    }
+                }
+
+                &.two {
+                    position: absolute;
+                    top: 200px;
+                    left: 50%;
+                    margin-left: -110px;
+
+                    .decor {
+                        @include text-decor-img;
+                        margin: -20px 81px;
+                    }
+                }
+
+                &.three {
+                    position: absolute;
+                    top: 75px;
+                    right: 40px;
+
+                    .decor {
+                        @include text-decor-img;
+                        margin: -20px 36px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#cafe {
+    background-image: url(http://www.duchamp.ee/mc-wp/wp-content/uploads/2017/11/kalavalik_1920x1280-min.jpg);
+
+    .triangle {
+        position: absolute;
+        height: 100%;
+        width: 40%;
+        left: 0;
+        overflow: hidden;
+
+        svg {
+            opacity: 0.8;
+            position: relative;
+            top: 60%;
+            transform: translateY(-50%);
+        }
+
+        .text {
+            position: absolute;
+            width: 60%;
+            top: 44%;
+            padding: 20px 20px 20px 40px;
+        }
+
+    }
+
+}
+
+#catering {
+    background-image: url(http://www.duchamp.ee/mc-wp/wp-content/uploads/2017/11/kana_1920x1280-min.jpg);
+
+    .triangle {
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        right: 0;
+        overflow: hidden;
+
+        svg {
+            position: relative;
+            top: 40%;
+            transform: translateY(-50%);
+            opacity: 0.8;
+        }
+
+        .text {
+            position: absolute;
+            width: 58%;
+            top: 26%;
+            right: 0;
+            padding: 20px 20px 20px 40px;
+        }
+
+    }
+
+
+}
+
+#equipment {
+    background-image: url(http://www.duchamp.ee/mc-wp/wp-content/uploads/2017/11/juustuvalik_1920x1280-min.jpg);
+
+    .triangle {
+        position: absolute;
+        height: 100%;
+        width: 40%;
+        left: 0;
+        overflow: hidden;
+
+
+        svg {
+            position: relative;
+            top: 60%;
+            transform: translateY(-50%);
+            opacity: 0.8;
+        }
+
+        .text {
+            position: absolute;
+            width: 60%;
+            top: 44%;
+            padding: 20px 20px 20px 40px;
+        }
+    }
+}
+
+#contact {
+    background-image: url(http://www.duchamp.ee/mc-wp/wp-content/uploads/2017/11/kook_1920x1280-min.jpg);
+
+    .triangle {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        overflow: hidden;
+
+        svg {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.8;
+        }
+
+        .text {
+            position: absolute;
+            width: 100%;
+            top: 25%;
+
+            form {
+                margin: 0 auto;
+                width: 30%;
+
+                .group {
+                    position:relative;
+                    margin-bottom:45px;
+                }
+                input {
+                    background: transparent;
+                    color: white;
+                    font-size:18px;
+                    padding:10px 10px 10px 5px;
+                    display:block;
+                    width:100%;
+                    border:none;
+                    border-bottom:2px solid white;
+                }
+                input:focus {
+                    outline:none;
+                }
+
+                textarea {
+                    background: transparent;
+                    color: white;
+                    font-size:18px;
+                    padding:10px 10px 10px 5px;
+                    display:block;
+                    width:100%;
+                    height: 200px;
+                    border:none;
+                    border-bottom:2px solid white;
+                }
+
+                textarea:focus {
+                    outline:none;
+                }
+
+                /* LABEL ======================================= */
+                label {
+                    color: $yellow;
+                    font-size:18px;
+                    font-weight:normal;
+                    position:absolute;
+                    pointer-events:none;
+                    left:5px;
+                    top:10px;
+                    transition:0.2s ease all;
+                    -moz-transition:0.2s ease all;
+                    -webkit-transition:0.2s ease all;
+                }
+
+                /* active state */
+                input:focus ~ label, input:valid ~ label, textarea:focus ~ label, textarea:valid ~ label {
+                    top:-20px;
+                    font-size:14px;
+                    color: $yellow;
+                }
+
+                /* BOTTOM BARS ================================= */
+                .bar {
+                    position:relative;
+                    display:block;
+                    width:100%;
+                }
+                .bar:before, .bar:after {
+                    content:'';
+                    height:4px;
+                    width:0;
+                    bottom:1px;
+                    position:absolute;
+                    background: white;
+                    transition:0.2s ease all;
+                    -moz-transition:0.2s ease all;
+                    -webkit-transition:0.2s ease all;
+                }
+                .bar:before {
+                    left:50%;
+                }
+                .bar:after {
+                    right:50%;
+                }
+
+                /* active state */
+                input:focus ~ .bar:before, input:focus ~ .bar:after, textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
+                    width:50%;
+                }
+
+                /* HIGHLIGHTER ================================== */
+                .highlight {
+                    position:absolute;
+                    height:60%;
+                    width:100px;
+                    top:25%;
+                    left:0;
+                    pointer-events:none;
+                    opacity:0.5;
+
+                    &.textarea {
+                        height:90%;
+                        top:6%;
+                    }
+                }
+
+                /* active state */
+                input:focus ~ .highlight, textarea:focus ~ .highlight {
+                    -webkit-animation:inputHighlighter 0.3s ease;
+                    -moz-animation:inputHighlighter 0.3s ease;
+                    animation:inputHighlighter 0.3s ease;
+                }
+
+                /* ANIMATIONS ================ */
+                @-webkit-keyframes inputHighlighter {
+                    from { background:$yellow; }
+                    to 	{ width:0; background:transparent; }
+                }
+                @-moz-keyframes inputHighlighter {
+                    from { background:$yellow; }
+                    to 	{ width:0; background:transparent; }
+                }
+                @keyframes inputHighlighter {
+                    from { background:$yellow; }
+                    to 	{ width:0; background:transparent; }
+                }
+
+                .btn {
+                    width: 100%;
+                }
+            }
+
+        }
+
+        .footer {
+            position: absolute;
+            right: 40px;
+            bottom: 20px;
+            background: #cfd63d;
+            padding: 20px;
+
+            p {
+                color: black;
+            }
+        }
+    }
+
+
+}
+// end pages ----------------------------------------------------

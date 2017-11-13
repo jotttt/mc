@@ -41,6 +41,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Comments
 # Infinite scroll
 # Parallax
+# Layout
 # Media
 	## Captions
 	## Galleries
@@ -112,6 +113,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Parallax
 --------------------------------------------------------------*/
 @import "modules/parallax";
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+@import "layout/maru-layout";
 
 /*--------------------------------------------------------------
 # Media
