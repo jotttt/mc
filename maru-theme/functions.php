@@ -119,6 +119,8 @@ add_action( 'widgets_init', 'maru_theme_widgets_init' );
 function maru_theme_scripts() {
 	wp_enqueue_style( 'maru-theme-style', get_stylesheet_uri() );
 
+    wp_enqueue_style( 'maru-theme-bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '20151215', 'all' );
+
 	wp_enqueue_script( 'maru-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'maru-theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
